@@ -1,52 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>0초 맞추기</title>
 </head>
+
 <body>
-    <h1>0초를 맞춰라!</h1>
-    <h2 id="se"></h2>
-    <button id="timeit">Start</button>
-    <script>
-    var gamebtn=document.getElementById("timeit");
-    var gamesectxt=document.getElementById("se");
-    gamebtn.addEventListener("click",gamehandler);
-    var gamestatus=0;//0 idle,1 ongame, 2 result
-    var gametime, timerid;
-    var difficulty=5
-    function gamehandler(){
-        switch(gamestatus){
-            case 0:
-                gametime = new Date();
-                gametime.setSeconds(gametime.getSeconds() + 10);                
-                gamestatus=1;
-                gamebtn.innerText="Now!";
-                timerid=setInterval(()=>{
-                    var cha=(gametime.getTime()-Date.now())/1000;
-                    if(cha>difficulty){
-                        gamesectxt.innerText=cha;
-                    }else{
-                        gamesectxt.innerText="?.???";
-                    }
-                },10)
-            break;
-            case 1:
-                var cha=(gametime.getTime()-Date.now())/1000;
-                gamesectxt.innerText=cha;
-                gamestatus=2;
-                gamebtn.innerText="Reset";
-                clearInterval(timerid);
-            break;
-            case 2:
-                gamesectxt.innerText="";
-                gamebtn.innerText="Start!";
-                gamestatus=0;
-            break;
-        }
-    }
-    </script>
+    <div id="app">
+        <h1 id="title">0초를 맞춰라!</h1>
+        <h2 id="se"></h2>
+        <button id="timeit">Start</button>
+    </div>
+    
+    <script src="main.js"></script>
 </body>
+
 </html>
