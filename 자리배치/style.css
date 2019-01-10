@@ -50,10 +50,27 @@ body{
 
     transition: 0.2s;
 }
+.stu_animation{
+    animation-duration: 3s;
+    animation-name: alphaSin;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 .stu:hover{
     background-color: rgba(54, 175, 255, 0.1);
 }
 .stu:active{
     background-color: #36afff;
     color: white;    
+}
+@keyframes alphaSin {
+  from {
+    opacity: 1;
+
+  }
+
+  to {
+    opacity: 0.9;
+    color: #36afff;
+  }
 }
