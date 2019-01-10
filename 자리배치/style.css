@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #36afff;
+}
+
+#title{
+    color: white;
+}
+#stuList{
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+    height: 80vh;
+
+}
+.class{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 30%;
+
+    border: 2px solid #BBB;
+
+    background-color: white;
+
+    margin: 10px;
+}
+.stu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgba(54, 175, 255, 0.2);
+
+    border: 1px solid #CCC;
+
+    box-sizing: border-box;
+
+    transition: 0.2s;
+}
+.stu:hover{
+    background-color: rgba(54, 175, 255, 0.1);
+}
+.stu:active{
+    background-color: #36afff;
+    color: white;    
+}
